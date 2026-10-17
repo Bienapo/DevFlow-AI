@@ -74,6 +74,8 @@ npm run dev
 - API 文档：http://localhost:8000/docs
 - 前端：http://localhost:3000
 
+Windows 上安装依赖并配置 `.env` 后，可在项目根目录执行 `pwsh -File .\scripts\start_full.ps1` 一次启动正式模式。脚本会启动 PostgreSQL、etcd、MinIO、Milvus，并使用本地模型缓存启动后端与 Next.js 前端。首次运行前需要启动 Docker Desktop；如果缺少前端构建，脚本会先执行 `npm run build`。启动日志保存在 `.data/` 中。
+
 ## RAG 知识问答系统
 
 项目内置了与第 7.1 节流程一一对应的完整 RAG 系统：知识库创建向导、文档解析、段落感知切片、Embedding、向量/关键词混合检索、重排、召回测试、问答工作室、上下文组装、基于证据生成和编号引用。支持 TXT、Markdown、PDF、DOCX、JSON、CSV 与日志文件；重复文件会按 SHA-256 跳过。
