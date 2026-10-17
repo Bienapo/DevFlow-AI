@@ -20,6 +20,7 @@ frontend/.next/
 frontend/.next-dev/
 frontend/out/
 frontend/tsconfig.tsbuildinfo
+frontend/next-env.d.ts
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
